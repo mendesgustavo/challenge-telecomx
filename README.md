@@ -1,95 +1,93 @@
-Telecom X – Análise de Churn de Clientes
+# Telecom X – Análise de Churn de Clientes
 
-Descrição do Projeto
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![Pandas](https://img.shields.io/badge/Pandas-1.5.3-green)
+![Seaborn](https://img.shields.io/badge/Seaborn-0.12.2-orange)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-3.7.1-red)
 
-Este projeto analisa os fatores que influenciam a evasão de clientes (Churn) na Telecom X.
-O objetivo é identificar perfis de clientes de maior risco e fornecer insights estratégicos que apoiem ações de retenção e otimização de receita.
+## Descrição do Projeto
 
-Tecnologias Utilizadas
+Este projeto realiza uma análise detalhada da **evasão de clientes (Churn)** na Telecom X. O objetivo é identificar perfis de clientes de maior risco e fornecer insights estratégicos que possam ser utilizados para reduzir cancelamentos e aumentar a retenção.
 
-Python 3
+A análise foi conduzida utilizando **Python**, com foco em **ETL, análise exploratória de dados (EDA)** e visualizações estratégicas.
 
-Pandas – manipulação de dados
+## Tecnologias e Ferramentas
 
-NumPy – cálculos numéricos
+* **Python 3** – linguagem de programação
+* **Pandas** – manipulação de dados
+* **NumPy** – cálculos numéricos
+* **Matplotlib & Seaborn** – visualização de dados
+* **Google Colab** – ambiente de execução
 
-Matplotlib & Seaborn – visualização de dados
+## Estrutura do Repositório
 
-Google Colab – ambiente de execução
-
-Estrutura do Projeto
+```text
 TelecomX-Churn-Analysis/
 │
 ├── TelecomX_Data.json       # Dados brutos
 ├── TelecomX_Churn.ipynb     # Notebook completo com análise
 ├── README.md                # Este arquivo
 └── imagens/                 # Gráficos exportados (opcional)
-Etapas do Projeto
+```
 
-Extração de Dados
+## Etapas do Projeto
 
-Importação dos dados da API JSON da Telecom X
+1. **Extração de Dados**
 
-Limpeza e Tratamento (ETL)
+   * Importação dos dados da API JSON da Telecom X.
 
-Normalização do JSON
+2. **Limpeza e Tratamento (ETL)**
 
-Conversão de tipos de dados
+   * Normalização do JSON em formato tabular
+   * Conversão de tipos de dados
+   * Remoção de registros inconsistentes
+   * Criação da coluna `Contas_Diarias` para análise diária do faturamento
 
-Remoção de registros nulos ou inconsistentes
+3. **Análise Exploratória de Dados (EDA)**
 
-Criação da coluna Contas_Diarias
+   * Taxa geral de churn
+   * Tempo médio de permanência por churn
+   * Churn por tipo de contrato e serviço de internet
+   * Impacto do suporte técnico
+   * Faturamento mensal x churn
+   * Cruzamentos críticos para identificação de perfis de risco
 
-Análise Exploratória de Dados (EDA)
+4. **Visualizações Estratégicas**
 
-Taxa geral de churn
+   * Gráficos de barras, boxplots e heatmaps destacando padrões de churn
 
-Tempo médio de permanência por churn
+5. **Insights e Recomendações**
 
-Churn por tipo de contrato e serviço de internet
+   * Segmentos de maior risco identificados
+   * Estratégias sugeridas para redução de evasão
 
-Impacto do suporte técnico
+## Principais Insights
 
-Faturamento mensal x churn
+* Clientes que cancelam possuem menor tempo médio de contrato (~18 meses)
+* Contratos mensais apresentam alta taxa de churn (42,7%)
+* Fibra óptica apresenta churn elevado (41,9%), especialmente em contratos mensais
+* Ausência de suporte técnico aumenta churn (~41,6%)
+* Clientes com contrato mensal e sem suporte técnico apresentam churn próximo de 50%
 
-Cruzamentos críticos para identificação de perfis de risco
+## Recomendações Estratégicas
 
-Visualizações Estratégicas
+1. Incentivar migração de contratos mensais para anuais ou bienais
+2. Criar programa de retenção para clientes nos primeiros 6–12 meses
+3. Oferecer suporte técnico preventivo para clientes de fibra óptica
+4. Revisar comunicação e percepção de valor do serviço de fibra óptica
+5. Monitorar continuamente clientes de alto risco
 
-Boxplots e barplots para destacar padrões de churn
+## Visualizações
 
-Heatmaps para análise segmentada
+As principais visualizações estão disponíveis no notebook, incluindo:
 
-Insights e Recomendações
+* Distribuição geral de churn
+* Tempo de permanência por churn
+* Churn por tipo de contrato
+* Churn por tipo de internet
+* Churn por suporte técnico
+* Heatmap de proporção de contratos por tipo de internet
 
-Segmentos de maior risco identificados
+## Resultado Esperado
 
-Estratégias sugeridas para reduzir evasão
-
-Principais Insights
-
-Clientes que cancelam têm menor tempo médio de contrato (~18 meses)
-
-Contrato mensal apresenta alta taxa de churn (42,7%)
-
-Fibra óptica possui churn elevado (41,9%), especialmente em contratos mensais
-
-Ausência de suporte técnico aumenta churn (~41,6%)
-
-Clientes com contrato mensal e sem suporte técnico possuem churn próximo de 50%
-
-Recomendações Estratégicas
-
-Incentivar migração de contratos mensais para anuais ou bienais
-
-Criar programa de retenção para clientes nos primeiros 6–12 meses
-
-Oferecer suporte técnico preventivo para clientes de fibra óptica
-
-Revisar comunicação e percepção de valor do serviço de fibra óptica
-
-Monitorar continuamente clientes de alto risco
-
-Resultado Esperado
-
-A análise fornece um perfil detalhado de risco de churn, permitindo à Telecom X tomar decisões estratégicas para aumentar a retenção, otimizar faturamento e planejar ações preventivas direcionadas.
+A análise fornece um perfil detalhado de risco de churn, permitindo à Telecom X tomar decisões estratégicas para aumentar a retenção de clientes e otimizar receita, priorizando ações nos segmentos mais críticos.
